@@ -9,6 +9,7 @@ terraform {
 
   required_version = ">= 0.14.9"
 
+
 # option to store tfstate file in Azure
   backend "azurerm" {
     resource_group_name  = "cloud-shell-storage-westeurope"
