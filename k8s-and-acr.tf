@@ -26,6 +26,11 @@ resource "azurerm_kubernetes_cluster" "aks1" {
     type = "SystemAssigned"
   }
 
+  auto_scaler_profile {
+    scale_down_delay_after_add = "1m"
+    scale_down_unneeded        = "1m"
+  }
+
   addon_profile {
     oms_agent {
       enabled =  true

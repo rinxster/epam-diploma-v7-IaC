@@ -63,14 +63,6 @@ resource "azurerm_monitor_diagnostic_setting" "diag_setting_application_insights
   }
 }
 
-output "instrumentation_key" {
-  value = azurerm_application_insights.example.instrumentation_key
-  sensitive = true
-}
-
-output "app_id" {
-  value = azurerm_application_insights.example.app_id
-}
 
 resource "azurerm_monitor_diagnostic_setting" "diag_setting_postgresqldb" {
   name                       = "diag_setting_postgresqldb"
