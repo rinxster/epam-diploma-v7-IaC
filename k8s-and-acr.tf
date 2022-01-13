@@ -19,6 +19,7 @@ resource "azurerm_kubernetes_cluster" "aks1" {
     min_count = 1
     max_count = 3
     vm_size = "Standard_B2s"
+    #availability_zones  = ["1", "2"]
     enable_auto_scaling = true
   }
 
